@@ -52,8 +52,6 @@ public class HandMovement : MonoBehaviour
         xAccel = Mathf.Clamp(horizontal * 0.2f, -handAccelMax, handAccelMax);
         yAccel = Mathf.Clamp(vertical * 0.2f, -handAccelMax, handAccelMax);
 
-        if (yAccel < 0) { Debug.Log(yAccel); }
-
         if (xAccel == 0 && xSpeed != 0)
         {
             if (xSpeed > 0)
