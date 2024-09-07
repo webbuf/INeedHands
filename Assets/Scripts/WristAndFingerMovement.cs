@@ -16,6 +16,10 @@ public class WristAndFingerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        animator.SetBool("PointerClose", Input.GetKey(KeyCode.A));
+        animator.SetBool("PointerCurl", Input.GetKey(KeyCode.R));
+        animator.SetBool("ThumbCurl", Input.GetKey(KeyCode.Space));
+        animator.SetBool("MiddleCurl", Input.GetKey(KeyCode.E));
+        animator.SetBool("RingCurl", Input.GetKey(KeyCode.W));
+        animator.SetBool("PinkyCurl", Input.GetKey(KeyCode.A));
     }
 }
