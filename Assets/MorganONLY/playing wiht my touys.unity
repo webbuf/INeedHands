@@ -520,7 +520,7 @@ GameObject:
   - component: {fileID: 6991919504630522634}
   m_Layer: 0
   m_Name: Spatula
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1014,7 +1014,7 @@ GameObject:
   - component: {fileID: 8461348093088061579}
   m_Layer: 0
   m_Name: Knife
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1136,7 +1136,7 @@ GameObject:
   - component: {fileID: 6722854849439731312}
   m_Layer: 0
   m_Name: BoilingPot
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1556,7 +1556,7 @@ GameObject:
   - component: {fileID: 8274740715717198389}
   m_Layer: 0
   m_Name: Salt
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1795,7 +1795,7 @@ GameObject:
   - component: {fileID: 6508832875103210090}
   m_Layer: 0
   m_Name: Plate
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2153,7 +2153,7 @@ GameObject:
   - component: {fileID: 7568908580653115322}
   m_Layer: 0
   m_Name: Food Sensor
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2856,7 +2856,7 @@ GameObject:
   - component: {fileID: 6189730858592559333}
   m_Layer: 0
   m_Name: CuttingBoard
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3020,7 +3020,7 @@ GameObject:
   - component: {fileID: 7904218291692329113}
   m_Layer: 0
   m_Name: OliveOil
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3105,7 +3105,7 @@ GameObject:
   - component: {fileID: 8592244503410634236}
   m_Layer: 0
   m_Name: Pepper
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4314,7 +4314,7 @@ GameObject:
   - component: {fileID: 9171238677413172223}
   m_Layer: 0
   m_Name: Spice
-  m_TagString: Grabbale
+  m_TagString: Grabbable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
