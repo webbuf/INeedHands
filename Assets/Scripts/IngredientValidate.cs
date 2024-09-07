@@ -33,4 +33,9 @@ public class IngredientValidate : MonoBehaviour
     public Boolean validateIngredient(string ingredient) {
         return crohns.Contains(ingredient);
     }
+
+    public Boolean validateRecipe(HashSet<string> recipe) 
+    {
+        return recipe.Equals(crohns);
+    }
 }
