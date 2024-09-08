@@ -52,7 +52,7 @@ public class GrabBehavior : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("No grab here");
-        if (other.gameObject.tag == "Grabbable" && gameObject.transform.childCount < 2)
+        if ((other.gameObject.tag == "Grabbable" || other.gameObject.tag == "Spatula") && gameObject.transform.childCount < 2)
         {
             other.gameObject.transform.SetParent(gameObject.transform);
             child = other.gameObject.transform;
