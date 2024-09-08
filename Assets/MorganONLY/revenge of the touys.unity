@@ -233,7 +233,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &298178138
 RectTransform:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 151, y: 119}
+  m_AnchoredPosition: {x: 151, y: 124}
   m_SizeDelta: {x: 429.8585, y: 120.8285}
   m_Pivot: {x: 0.5, y: 0.4999998}
 --- !u!114 &298178139
@@ -422,6 +422,14 @@ PrefabInstance:
       propertyPath: validate
       value: 
       objectReference: {fileID: 1895797376}
+    - target: {fileID: 6062940415379200433, guid: 0fde35c383c4c3b4aa310afc57531319, type: 3}
+      propertyPath: ingredientId
+      value: Pork
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177851725219887569, guid: 0fde35c383c4c3b4aa310afc57531319, type: 3}
+      propertyPath: m_Name
+      value: Pork
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3060515808349576668, guid: 0fde35c383c4c3b4aa310afc57531319, type: 3}

@@ -16,18 +16,17 @@ public class IngredientValidate : MonoBehaviour
     private const string CrohnsPreamble = "People with Crohn's Disease can't have ";
     private const string because = " beacause ";
     private const string fiber = "it is high in fiber.";
-    private const string spice = "spicy foods can trigger inflammation";
-    private const string fatMeat = "fatty meat can trigger a flare up";
+    private const string spice = "spicy foods can trigger inflammation.";
+    private const string fatMeat = "fatty meat can trigger a flare up.";
 
     private void Awake()
     {
         crohns = new HashSet<string>();
-      //  crohns.Add("Chicken");
-       // crohns.Add("Zucchini");
+        crohns.Add("Chicken");
+        crohns.Add("Zucchini");
         crohns.Add("Salt");
-       // crohns.Add("Pepper");
+        crohns.Add("Pepper");
         crohns.Add("OliveOil");
-        crohns.Add("Salmon");
         crohnsInfo = infoBox.GetComponent<TMP_Text>();
     }
 
@@ -52,7 +51,7 @@ public class IngredientValidate : MonoBehaviour
             {
                 info += fiber;
             }
-            else if (ingredient.Equals("Steak")) {
+            else if (ingredient.Equals("Steak") || ingredient.Equals("Pork") {
                 info += fatMeat;
             }
             else if (ingredient.Equals("Spice")) {
