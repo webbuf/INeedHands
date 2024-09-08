@@ -14,13 +14,14 @@ public class ButtonMashingEvent : MonoBehaviour
     private float timer = 0f; // Timer to track elapsed time
     public GameObject UI;
 
-    private bool active = false;
+    private bool enoughFood = false;
+    private bool burnerOn = false;
 
     public RecipeHandler recipe;
 
     private void Update()
     {
-        if (active)
+        if (enoughFood && burnerOn)
         {
             // Check if the "F" key is pressed
             if (Input.GetKeyDown(KeyCode.F))
@@ -65,13 +66,22 @@ public class ButtonMashingEvent : MonoBehaviour
             Debug.Log("Target activated!");
             UI.SetActive(false);
         }
-        else {
+        else
+        {
             Debug.Log("No meal to instantiate!");
         }
     }
 
-    public void Activate() {
-        active = true;
-        UI.SetActive(true);
+    public void Activate()
+    {
+        enoughFood = true;
+        if (enoughFood && burnerOn) UI.SetActive(true);
+    }
+
+    public void TriggerStove()
+    {
+        burnerOn = !burnerOn;
+        if (enoughFood && burnerOn) UI.SetActive(true);
+        else UI.SetActive(false);
     }
 }

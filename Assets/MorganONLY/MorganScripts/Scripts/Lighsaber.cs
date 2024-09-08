@@ -54,16 +54,16 @@ public class Lighsaber : MonoBehaviour
         _mesh = new Mesh();
         _meshParent.GetComponent<MeshFilter>().mesh = _mesh;
 
-        Material trailMaterial = Instantiate(_meshParent.GetComponent<MeshRenderer>().sharedMaterial);
+        /* Material trailMaterial = Instantiate(_meshParent.GetComponent<MeshRenderer>().sharedMaterial);
         trailMaterial.SetColor("Color_8F0C0815", _colour);
         _meshParent.GetComponent<MeshRenderer>().sharedMaterial = trailMaterial;
 
         Material bladeMaterial = Instantiate(_blade.GetComponent<MeshRenderer>().sharedMaterial);
         bladeMaterial.SetColor("Color_AF2E1BB", _colour);
-        _blade.GetComponent<MeshRenderer>().sharedMaterial = bladeMaterial;
+        _blade.GetComponent<MeshRenderer>().sharedMaterial = bladeMaterial; 
 
         _vertices = new Vector3[_trailFrameLength * NUM_VERTICES];
-        _triangles = new int[_vertices.Length];
+        _triangles = new int[_vertices.Length]; */
 
         //Set starting position for tip and base
         _previousTipPosition = _tip.transform.position;
@@ -71,7 +71,7 @@ public class Lighsaber : MonoBehaviour
     }
     
     void LateUpdate()
-    {
+    { /*
         //Reset the frame count one we reach the frame length
         if(_frameCount == (_trailFrameLength * NUM_VERTICES))
         {
@@ -114,7 +114,7 @@ public class Lighsaber : MonoBehaviour
         //Track the previous base and tip positions for the next frame
         _previousTipPosition = _tip.transform.position;
         _previousBasePosition = _base.transform.position;
-        _frameCount += NUM_VERTICES;
+        _frameCount += NUM_VERTICES; */
     }
 
     private void OnTriggerEnter(Collider other)

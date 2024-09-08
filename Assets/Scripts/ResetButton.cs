@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuScript : MonoBehaviour
+public class ResetButton : MonoBehaviour
 {
-    public GameObject pauseMenu;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +17,7 @@ public class MenuScript : MonoBehaviour
         
     }
 
-    public void StartGame() {
+    private void OnTriggerEnter(Collider other) {
         SceneManager.LoadScene(1, LoadSceneMode.Single);
-        Cursor.visible = false;
-    }
-
-    public void KillGame() {
-        Application.Quit();
     }
 }

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spatula
   - floorDestroy
+  - Grabbable
   layers:
   - Default
   - TransparentFX

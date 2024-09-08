@@ -45,8 +45,8 @@ public class GrabBehavior : MonoBehaviour
                 child.gameObject.transform.SetParent(null);
                 r.useGravity = true;
                 r.constraints = RigidbodyConstraints.None;
-                r.velocity = gameObject.GetComponent<Rigidbody>().velocity;
-                Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
+                //r.velocity = gameObject.GetComponent<Rigidbody>().velocity;
+                //Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
                 child = null;
             }
         }
