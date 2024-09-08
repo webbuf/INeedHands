@@ -51,7 +51,7 @@ public class IngredientValidate : MonoBehaviour
             {
                 info += fiber;
             }
-            else if (ingredient.Equals("Steak") || ingredient.Equals("Pork") {
+            else if (ingredient.Equals("Steak") || ingredient.Equals("Pork")) {
                 info += fatMeat;
             }
             else if (ingredient.Equals("Spice")) {
