@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class RecipeHandler : MonoBehaviour
 {
-    HashSet<string> currentRecipe;
+    private HashSet<string> currentRecipe;
+    public IngredientValidate validate;
 
     void Awake()
     {
@@ -32,5 +33,9 @@ public class RecipeHandler : MonoBehaviour
                 Debug.Log(s);
             }
         }
+    }
+
+    public bool isRecipeValid() {
+        return validate.validateRecipe(currentRecipe);
     }
 }

@@ -11,11 +11,11 @@ public class IngredientValidate : MonoBehaviour
     private void Awake()
     {
         crohns = new HashSet<string>();
-        crohns.Add("Chicken");
-        crohns.Add("Zucchini");
+      //  crohns.Add("Chicken");
+       // crohns.Add("Zucchini");
         crohns.Add("Salt");
-        crohns.Add("Pepper");
-        crohns.Add("Olive oil");
+       // crohns.Add("Pepper");
+        crohns.Add("OliveOil");
     }
 
     // Start is called before the first frame update
@@ -36,6 +36,15 @@ public class IngredientValidate : MonoBehaviour
 
     public Boolean validateRecipe(HashSet<string> recipe) 
     {
-        return recipe.Equals(crohns);
+        foreach (string s in recipe) {
+            if (!crohns.Contains(s)) return false;
+        }
+
+        foreach (string s in crohns)
+        {
+            if (!recipe.Contains(s)) return false;
+        }
+
+        return true;
     }
 }

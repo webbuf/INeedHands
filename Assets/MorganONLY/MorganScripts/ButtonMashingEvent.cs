@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ButtonMashingEvent : MonoBehaviour
 {
+
     public GameObject targetObject; // GameObject to activate
     public float timeLimit = 5f; // Time limit in seconds
     public int requiredPresses = 10; // Number of key presses required
@@ -11,6 +12,8 @@ public class ButtonMashingEvent : MonoBehaviour
     private int pressCount = 0; // Counter for key presses
     private float timer = 0f; // Timer to track elapsed time
     public GameObject UI;
+
+    public RecipeHandler recipe;
 
     private void Update()
     {
@@ -44,7 +47,7 @@ public class ButtonMashingEvent : MonoBehaviour
 
     private void ActivateTarget()
     {
-        if (targetObject != null)
+        if (targetObject != null && recipe.isRecipeValid())
         {
             targetObject.SetActive(true);
             Debug.Log("Target activated!");
