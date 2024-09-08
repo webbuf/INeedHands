@@ -10,6 +10,8 @@ public class ButtonMashingEvent : MonoBehaviour
     public float timeLimit = 5f; // Time limit in seconds
     public int requiredPresses = 10; // Number of key presses required
 
+    public VFXManager vfx;
+
     private int pressCount = 0; // Counter for key presses
     private float timer = 0f; // Timer to track elapsed time
     public GameObject UI;
@@ -23,6 +25,7 @@ public class ButtonMashingEvent : MonoBehaviour
     {
         if (enoughFood && burnerOn)
         {
+            vfx.startBoil();
             // Check if the "F" key is pressed
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -56,12 +59,14 @@ public class ButtonMashingEvent : MonoBehaviour
     {
         if (passMeal != null && recipe.isRecipeValid())
         {
+            vfx.happyPoof();
             passMeal.SetActive(true);
             Debug.Log("Target activated!");
             UI.SetActive(false);
         }
         else if (failMeal != null)
         {
+            vfx.badPoof();
             failMeal.SetActive(true);
             Debug.Log("Target activated!");
             UI.SetActive(false);

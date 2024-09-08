@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EatFood : MonoBehaviour
 {
+
+    public VFXManager vfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,11 +25,11 @@ public class EatFood : MonoBehaviour
             bool pass = other.transform.gameObject.GetComponent<MealInfo>().getSafe();
             if (pass)
             {
-                Debug.Log("Yay!");
+                vfx.happyEAt();
             }
             else
             {
-                Debug.Log("No :(");
+                vfx.badEat();
             }
             Destroy(other.transform.gameObject);
         }
