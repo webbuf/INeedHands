@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class HomieTurn : MonoBehaviour
 {
-  
-
 
     // Public field to assign the target GameObject in the Unity Editor
     public GameObject targetObject;
+    public HandMovement hand;
 
     // To store the original rotation
     private Quaternion originalRotation;
@@ -33,6 +32,7 @@ public class HomieTurn : MonoBehaviour
         // Check if the "D" key is pressed to rotate to the right
         if (Input.GetKeyDown(KeyCode.D))
         {
+            hand.SwitchPosition();
             if (targetObject != null)
             {
                 if (isRotated)

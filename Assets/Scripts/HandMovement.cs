@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class HandMovement : MonoBehaviour
 {
@@ -29,8 +30,14 @@ public class HandMovement : MonoBehaviour
     private float xSpeed;
     private float ySpeed;
 
+    private bool rotated;
+    private Vector3 kitchenPosition;
+    private Vector3 pantryPosition;
+
     void Awake() {
         controller = gameObject.GetComponent<CharacterController>();
+        kitchenPosition = new Vector3(0.813f, 1.484f, 1.305f);
+        pantryPosition = new Vector3(-1.347f, 1.465f, -1.319f);
     }
 
     // Start is called before the first frame update
@@ -91,8 +98,31 @@ public class HandMovement : MonoBehaviour
         {
             xSpeed = Mathf.Clamp(xSpeed + xAccel, -speedMax, speedMax);
             ySpeed = Mathf.Clamp(ySpeed + yAccel, -speedMax, speedMax);
-            Vector3 move = new Vector3(ySpeed, 0, -xSpeed);
+            Vector3 move;
+            if (!rotated)
+            {
+                move = new Vector3(ySpeed, 0, -xSpeed);
+            }
+            else {
+                move = new Vector3(-xSpeed, 0, -ySpeed);
+            }
             controller.Move(Vector3.ClampMagnitude(move, speedMax) * Time.fixedDeltaTime * handSpeedModifier);
         }
+    }
+
+    public void SwitchPosition() {
+        controller.enabled = false;
+        if (rotated)
+        {
+            transform.position = kitchenPosition;
+            transform.Rotate(0, -90, 0);
+        }
+        else
+        {
+            transform.position = pantryPosition;
+            transform.Rotate(0, 90, 0);
+        }
+        controller.enabled = true;
+        rotated = !rotated;
     }
 }

@@ -321,6 +321,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2109615311364699055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &429271791 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7672551765526265778, guid: 9a8242222d3cf4844841741f1e1fb4f0, type: 3}
+  m_PrefabInstance: {fileID: 1378839569}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96d822e5ac121164c85965da5d0269e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &607774163
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,6 +400,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1175179926 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4660692866955044345, guid: add3ace511d489545953715893cc86d5, type: 3}
+  m_PrefabInstance: {fileID: 1719407217}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1285156218
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5097979441308075795, guid: 9a8242222d3cf4844841741f1e1fb4f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.305
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 5097979441308075795, guid: 9a8242222d3cf4844841741f1e1fb4f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -648,7 +664,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 6134011568996150802}
     m_Modifications:
     - target: {fileID: 396441427644411194, guid: add3ace511d489545953715893cc86d5, type: 3}
       propertyPath: m_Name
@@ -656,15 +672,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4660692866955044345, guid: add3ace511d489545953715893cc86d5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.45
+      value: -7.0892496
       objectReference: {fileID: 0}
     - target: {fileID: 4660692866955044345, guid: add3ace511d489545953715893cc86d5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.402
+      value: 1.627929
       objectReference: {fileID: 0}
     - target: {fileID: 4660692866955044345, guid: add3ace511d489545953715893cc86d5, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.10783921
+      value: -1.0565581
       objectReference: {fileID: 0}
     - target: {fileID: 4660692866955044345, guid: add3ace511d489545953715893cc86d5, type: 3}
       propertyPath: m_LocalRotation.w
@@ -694,6 +710,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7370496402007687685, guid: add3ace511d489545953715893cc86d5, type: 3}
+      propertyPath: validate
+      value: 
+      objectReference: {fileID: 1895797376}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -711,6 +731,7 @@ GameObject:
   - component: {fileID: 1895797372}
   - component: {fileID: 1895797374}
   - component: {fileID: 1895797375}
+  - component: {fileID: 1895797376}
   m_Layer: 0
   m_Name: KitchenManager
   m_TagString: Untagged
@@ -731,6 +752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 2564617534876350087}
+  hand: {fileID: 429271791}
 --- !u!4 &1895797373
 Transform:
   m_ObjectHideFlags: 0
@@ -776,6 +798,18 @@ MonoBehaviour:
   timeLimit: 5
   requiredPresses: 10
   UI: {fileID: 2055612589}
+--- !u!114 &1895797376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895797371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8b4b33278dc46b47b4ecc61ed7e6a1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2055612589
 GameObject:
   m_ObjectHideFlags: 0
@@ -1161,6 +1195,7 @@ GameObject:
   - component: {fileID: 5896504809592117024}
   - component: {fileID: 719880378381065359}
   - component: {fileID: 5896504809592117025}
+  - component: {fileID: 5896504809592117026}
   m_Layer: 0
   m_Name: Banana
   m_TagString: Grabbable
@@ -1395,6 +1430,7 @@ GameObject:
   - component: {fileID: 3983603603501044805}
   - component: {fileID: 2994323902446927364}
   - component: {fileID: 8476204061920117054}
+  - component: {fileID: 8476204061920117055}
   m_Layer: 0
   m_Name: Zuccini
   m_TagString: Grabbable
@@ -1435,6 +1471,7 @@ GameObject:
   - component: {fileID: 1739564779813290613}
   - component: {fileID: 8461348093088061578}
   - component: {fileID: 8176601663304990499}
+  - component: {fileID: 8461348093088061579}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Grabbable
@@ -1780,6 +1817,7 @@ GameObject:
   - component: {fileID: 3931392036916034449}
   - component: {fileID: 6229900083782336215}
   - component: {fileID: 6540533770493553708}
+  - component: {fileID: 6540533770493553709}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Grabbable
@@ -1979,6 +2017,7 @@ GameObject:
   - component: {fileID: 8274740715717198388}
   - component: {fileID: 2609260924119011680}
   - component: {fileID: 8274740715717198389}
+  - component: {fileID: 8274740715717198390}
   m_Layer: 0
   m_Name: Salt
   m_TagString: Grabbable
@@ -2014,6 +2053,7 @@ GameObject:
   - component: {fileID: 1234162513016596909}
   - component: {fileID: 7039114162975294299}
   - component: {fileID: 7639539282839223199}
+  - component: {fileID: 7639539282839223200}
   m_Layer: 0
   m_Name: Rasberries
   m_TagString: Grabbable
@@ -2688,6 +2728,7 @@ GameObject:
   - component: {fileID: 6009589122133101439}
   - component: {fileID: 8515758854559427061}
   - component: {fileID: 8515758854559427062}
+  - component: {fileID: 8515758854559427063}
   m_Layer: 0
   m_Name: Cauliflower
   m_TagString: Grabbable
@@ -3058,6 +3099,7 @@ GameObject:
   - component: {fileID: 7445063903477658811}
   - component: {fileID: 7938290697595362309}
   - component: {fileID: 7938290697595362310}
+  - component: {fileID: 7938290697595362311}
   m_Layer: 0
   m_Name: Steak
   m_TagString: Grabbable
@@ -3262,6 +3304,7 @@ GameObject:
   - component: {fileID: 973244808435667696}
   - component: {fileID: 3460421866319676937}
   - component: {fileID: 850820781245655954}
+  - component: {fileID: 6189730858592559333}
   m_Layer: 0
   m_Name: CuttingBoard
   m_TagString: Grabbable
@@ -3397,6 +3440,7 @@ GameObject:
   - component: {fileID: 5775378058230727531}
   - component: {fileID: 4300314657022017383}
   - component: {fileID: 7904218291692329113}
+  - component: {fileID: 7904218291692329114}
   m_Layer: 0
   m_Name: OliveOil
   m_TagString: Grabbable
@@ -3482,6 +3526,7 @@ GameObject:
   - component: {fileID: 1408612787241496597}
   - component: {fileID: 1782772281902902556}
   - component: {fileID: 8592244503410634236}
+  - component: {fileID: 8592244503410634237}
   m_Layer: 0
   m_Name: Pepper
   m_TagString: Grabbable
@@ -3730,6 +3775,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Banana
+--- !u!54 &5896504809592117026
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 388204660566691276}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5950188596680329382
 GameObject:
   m_ObjectHideFlags: 0
@@ -3743,6 +3815,7 @@ GameObject:
   - component: {fileID: 5196386517908922542}
   - component: {fileID: 2478070031576903155}
   - component: {fileID: 7585476479360309894}
+  - component: {fileID: 7585476479360309895}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Grabbable
@@ -3859,6 +3932,7 @@ Transform:
   - {fileID: 1269949018468963331}
   - {fileID: 8592244503410634235}
   - {fileID: 3716450177179774570}
+  - {fileID: 1175179926}
   m_Father: {fileID: 2109615311364699055}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &6189730858592559332
@@ -3876,6 +3950,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 6134011568996150802}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &6189730858592559333
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4782230906589628946}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6229900083782336215
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4033,6 +4134,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Chicken
+--- !u!54 &6540533770493553709
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721818580096528275}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &6619670625176899171
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4453,6 +4581,7 @@ GameObject:
   - component: {fileID: 7122875345352094236}
   - component: {fileID: 2047024092444824861}
   - component: {fileID: 7377129943061794863}
+  - component: {fileID: 7377129943061794864}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Grabbable
@@ -4473,6 +4602,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Salmon
+--- !u!54 &7377129943061794864
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7377129943061794862}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &7445063903477658811
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4573,6 +4729,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Lemon
+--- !u!54 &7585476479360309895
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5950188596680329382}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &7605481757007846088
 Transform:
   m_ObjectHideFlags: 0
@@ -4631,6 +4814,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Raspberries
+--- !u!54 &7639539282839223200
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937678208973606698}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7651285691765100447
 GameObject:
   m_ObjectHideFlags: 0
@@ -4660,6 +4870,7 @@ GameObject:
   - component: {fileID: 1789210190602069385}
   - component: {fileID: 9171238677413172222}
   - component: {fileID: 9171238677413172223}
+  - component: {fileID: 9171238677413172224}
   m_Layer: 0
   m_Name: Spice
   m_TagString: Grabbable
@@ -4750,6 +4961,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Olive Oil
+--- !u!54 &7904218291692329114
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5176999685848327042}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &7938290697595362309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4784,6 +5022,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Steak
+--- !u!54 &7938290697595362311
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311381125493110258}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &7941910751431093785
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4855,6 +5120,7 @@ GameObject:
   - component: {fileID: 2427939527643019081}
   - component: {fileID: 1610484569118535613}
   - component: {fileID: 8029752138392030592}
+  - component: {fileID: 8029752138392030593}
   m_Layer: 0
   m_Name: Broccoli
   m_TagString: Grabbable
@@ -4875,6 +5141,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Broccoli
+--- !u!54 &8029752138392030593
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8029752138392030591}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8055213060565733150
 GameObject:
   m_ObjectHideFlags: 0
@@ -4962,6 +5255,7 @@ GameObject:
   - component: {fileID: 7062002535923409992}
   - component: {fileID: 7047881360145442901}
   - component: {fileID: 8078231272934660767}
+  - component: {fileID: 8078231272934660768}
   m_Layer: 0
   m_Name: Dates
   m_TagString: Grabbable
@@ -4982,6 +5276,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Dates
+--- !u!54 &8078231272934660768
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8078231272934660766}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8085453208434209465
 GameObject:
   m_ObjectHideFlags: 0
@@ -5139,6 +5460,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Salt
+--- !u!54 &8274740715717198390
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1844436438873957855}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &8461348093088061578
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5181,6 +5529,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8461348093088061579
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1143914545850009195}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &8462073110395657366
 Transform:
   m_ObjectHideFlags: 0
@@ -5217,6 +5592,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Zucchini
+--- !u!54 &8476204061920117055
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975939867411008610}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &8515758854559427061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5251,6 +5653,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Cauliflower
+--- !u!54 &8515758854559427063
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3522751665068434500}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!23 &8519719552250126597
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5341,6 +5770,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Pepper
+--- !u!54 &8592244503410634237
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320599731118205087}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &8677054353313840467
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5567,6 +6023,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientId: Spice
+--- !u!54 &9171238677413172224
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7718246226302746005}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5575,5 +6058,4 @@ SceneRoots:
   - {fileID: 2109615311364699055}
   - {fileID: 1895797373}
   - {fileID: 607774166}
-  - {fileID: 1719407217}
   - {fileID: 1378839569}
