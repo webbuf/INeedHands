@@ -20,4 +20,24 @@ public class VFXManager : MonoBehaviour
     {
         
     }
+
+    public void happyPoof() {
+        makeGood.SetActive(true);
+    }
+
+    public void badPoof() {
+        makeBad.SetActive(true);
+    }
+
+    public void happyEAt() {
+        serveGood.SetActive(true);
+    }
+
+    public void badEat() {
+        serveBad.SetActive(true);
+    }
+
+    public void startBoil() { 
+        boil.SetActive(true);
+    }
 }
