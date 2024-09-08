@@ -29,7 +29,7 @@ public class GrabBehavior : MonoBehaviour
         fingersDown += Input.GetKey(KeyCode.E) ? 1 : 0;
         fingersDown += Input.GetKey(KeyCode.R) ? 1 : 0;
         fingersDown += Input.GetKey(KeyCode.Space) ? 1 : 0;
-        Debug.Log(fingersDown);
+        //Debug.Log(fingersDown);
         if (fingersDown >= 3 && !grabbing)
         {
             grabbing = true;

@@ -29,6 +29,7 @@ public class RecipeHandler : MonoBehaviour
         if (other.transform.gameObject.GetComponent<IngredientInfo>() != null) 
         {
             currentRecipe.Add(other.transform.gameObject.GetComponent<IngredientInfo>().getID());
+            Debug.Log(other.transform.gameObject.GetComponent<IngredientInfo>().getID());
             Destroy(other.transform.gameObject);
             foreach (string s in currentRecipe) {
                 Debug.Log(s);
