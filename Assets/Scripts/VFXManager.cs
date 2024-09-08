@@ -9,6 +9,12 @@ public class VFXManager : MonoBehaviour
     public GameObject serveGood;
     public GameObject serveBad;
     public GameObject boil;
+    public GameObject fire;
+
+    public AudioClip yum;
+    public AudioClip gross;
+    public AudioClip boiling;
+    public AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,13 +37,19 @@ public class VFXManager : MonoBehaviour
 
     public void happyEAt() {
         serveGood.SetActive(true);
+        audioSource.PlayOneShot(yum);
     }
 
     public void badEat() {
         serveBad.SetActive(true);
+        audioSource.PlayOneShot(gross);
+
     }
 
     public void startBoil() { 
+        fire.SetActive(true);
         boil.SetActive(true);
+        audioSource.PlayOneShot(boiling);
+
     }
 }

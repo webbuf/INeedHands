@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class RecipeHandler : MonoBehaviour
@@ -8,6 +9,9 @@ public class RecipeHandler : MonoBehaviour
     public IngredientValidate validate;
     public ButtonMashingEvent cook;
 
+    public AudioSource audioSource;
+    public AudioClip oil;
+    public AudioClip shaker;
     void Awake()
     {
         currentRecipe = new HashSet<string>();
@@ -28,11 +32,21 @@ public class RecipeHandler : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if (other.transform.gameObject.GetComponent<IngredientInfo>() != null) 
         {
-            currentRecipe.Add(other.transform.gameObject.GetComponent<IngredientInfo>().getID());
-            Debug.Log(other.transform.gameObject.GetComponent<IngredientInfo>().getID());
+            string id = other.transform.gameObject.GetComponent<IngredientInfo>().getID();
+            currentRecipe.Add(id);
+            Debug.Log(id);
             Destroy(other.transform.gameObject);
             foreach (string s in currentRecipe) {
                 Debug.Log(s);
+            }
+            if (id.Equals("OliveOil")) {
+                audioSource.PlayOneShot(oil);
+            }
+            else
+            {
+                if (id.Equals("Salt") || id.Equals("Pepper") || id.Equals("Spice")) {
+                    audioSource.PlayOneShot(shaker);
+                }
             }
         }
 
