@@ -34,10 +34,13 @@ public class HandMovement : MonoBehaviour
     private Vector3 kitchenPosition;
     private Vector3 pantryPosition;
 
+    Transform rotationTarget;
+
     void Awake() {
         controller = gameObject.GetComponent<CharacterController>();
         kitchenPosition = new Vector3(0.813f, 1.484f, 1.305f);
         pantryPosition = new Vector3(-1.347f, 1.465f, -1.319f);
+        rotationTarget = transform.GetChild(0);
     }
 
     // Start is called before the first frame update
@@ -91,7 +94,7 @@ public class HandMovement : MonoBehaviour
 
         else if (Input.GetButton("Fire2"))
         {
-            gameObject.transform.Rotate(-horizontal, 0, 0);
+            rotationTarget.Rotate(-horizontal, 0, 0);
         }
 
         else
