@@ -24,14 +24,14 @@ public class Lighsaber : MonoBehaviour
       [Tooltip("The mesh object with the mesh filter and mesh renderer")]
       private GameObject _meshParent = null;
 
-    /* [SerializeField]
+     [SerializeField]
      [Tooltip("The number of frame that the trail should be rendered for")]
      private int _trailFrameLength = 3;
 
      [SerializeField]
      [ColorUsage(true, true)]
      [Tooltip("The colour of the blade and trail")]
-     private Color _colour = Color.red;*/
+     private Color _colour = Color.red;
 
     [SerializeField]
     [Tooltip("The amount of force applied to each side of a slice")]
@@ -52,7 +52,7 @@ public class Lighsaber : MonoBehaviour
         //Init mesh and triangles
         _meshParent.transform.position = Vector3.zero;
         _mesh = new Mesh();
-        /*_meshParent.GetComponent<MeshFilter>().mesh = _mesh;
+        _meshParent.GetComponent<MeshFilter>().mesh = _mesh;
 
         Material trailMaterial = Instantiate(_meshParent.GetComponent<MeshRenderer>().sharedMaterial);
         trailMaterial.SetColor("Color_8F0C0815", _colour);
@@ -63,7 +63,7 @@ public class Lighsaber : MonoBehaviour
         _blade.GetComponent<MeshRenderer>().sharedMaterial = bladeMaterial;
 
         _vertices = new Vector3[_trailFrameLength * NUM_VERTICES];
-        _triangles = new int[_vertices.Length];*/
+        _triangles = new int[_vertices.Length];
 
         //Set starting position for tip and base
         _previousTipPosition = _tip.transform.position;
@@ -73,10 +73,10 @@ public class Lighsaber : MonoBehaviour
     void LateUpdate()
     {
         //Reset the frame count one we reach the frame length
-      /*  if(_frameCount == (_trailFrameLength * NUM_VERTICES))
+        if(_frameCount == (_trailFrameLength * NUM_VERTICES))
         {
             _frameCount = 0;
-        }*/
+        }
 
         //Draw first triangle vertices for back and front
         _vertices[_frameCount] = _base.transform.position;
