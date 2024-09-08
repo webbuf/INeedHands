@@ -6,6 +6,7 @@ public class RecipeHandler : MonoBehaviour
 {
     private HashSet<string> currentRecipe;
     public IngredientValidate validate;
+    public ButtonMashingEvent cook;
 
     void Awake()
     {
@@ -33,9 +34,18 @@ public class RecipeHandler : MonoBehaviour
                 Debug.Log(s);
             }
         }
+
+        if (currentRecipe.Count == 3)
+        {
+            cook.Activate();
+        }
     }
 
     public bool isRecipeValid() {
         return validate.validateRecipe(currentRecipe);
+    }
+
+    public int getRecipeCount() {
+        return currentRecipe.Count;
     }
 }

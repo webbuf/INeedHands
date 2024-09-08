@@ -23,4 +23,8 @@ public class IngredientInfo : MonoBehaviour
     public string getID() {
         return ingredientId;
     }
+
+    public void setID(string id) {
+        ingredientId = id;
+    }
 }  

@@ -41,9 +41,12 @@ public class GrabBehavior : MonoBehaviour
             sphereCollider.enabled = false;
             Debug.Log("The grabberrr");
             if (gameObject.transform.childCount > 1) {
+                Rigidbody r = child.gameObject.GetComponent<Rigidbody>();
                 child.gameObject.transform.SetParent(null);
-                child.gameObject.GetComponent<Rigidbody>().useGravity = true;
-                child.gameObject.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+                r.useGravity = true;
+                r.constraints = RigidbodyConstraints.None;
+                r.velocity = gameObject.GetComponent<Rigidbody>().velocity;
+                Debug.Log(gameObject.GetComponent<Rigidbody>().velocity);
                 child = null;
             }
         }

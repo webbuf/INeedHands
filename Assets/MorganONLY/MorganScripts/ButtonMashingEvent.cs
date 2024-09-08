@@ -5,7 +5,8 @@ using UnityEngine;
 public class ButtonMashingEvent : MonoBehaviour
 {
 
-    public GameObject targetObject; // GameObject to activate
+    public GameObject passMeal; // GameObject to activate
+    public GameObject failMeal;
     public float timeLimit = 5f; // Time limit in seconds
     public int requiredPresses = 10; // Number of key presses required
 
@@ -13,49 +14,64 @@ public class ButtonMashingEvent : MonoBehaviour
     private float timer = 0f; // Timer to track elapsed time
     public GameObject UI;
 
+    private bool active = false;
+
     public RecipeHandler recipe;
 
     private void Update()
     {
-        // Check if the "F" key is pressed
-        if (Input.GetKeyDown(KeyCode.F))
+        if (active)
         {
-            pressCount++;
-            // Reset timer on first press
-            if (pressCount == 1)
+            // Check if the "F" key is pressed
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                timer = Time.time;
+                pressCount++;
+                // Reset timer on first press
+                if (pressCount == 1)
+                {
+                    timer = Time.time;
+                }
+
+                // Check if the required number of presses is met within the time limit
+                if (pressCount >= requiredPresses && (Time.time - timer) <= timeLimit)
+                {
+                    ActivateTarget();
+                    // Reset counter and timer after activation
+                    pressCount = 0;
+                    timer = 0f;
+                }
             }
 
-            // Check if the required number of presses is met within the time limit
-            if (pressCount >= requiredPresses && (Time.time - timer) <= timeLimit)
+            // Reset if time limit exceeded
+            if (Time.time - timer > timeLimit)
             {
-                ActivateTarget();
-                // Reset counter and timer after activation
                 pressCount = 0;
                 timer = 0f;
             }
-        }
-
-        // Reset if time limit exceeded
-        if (Time.time - timer > timeLimit)
-        {
-            pressCount = 0;
-            timer = 0f;
         }
     }
 
     private void ActivateTarget()
     {
-        if (targetObject != null && recipe.isRecipeValid())
+        if (passMeal != null && recipe.isRecipeValid())
         {
-            targetObject.SetActive(true);
+            passMeal.SetActive(true);
             Debug.Log("Target activated!");
             UI.SetActive(false);
         }
-        else
+        else if (failMeal != null)
         {
-            Debug.LogWarning("Target Object is not assigned.");
+            failMeal.SetActive(true);
+            Debug.Log("Target activated!");
+            UI.SetActive(false);
         }
+        else {
+            Debug.Log("No meal to instantiate!");
+        }
+    }
+
+    public void Activate() {
+        active = true;
+        UI.SetActive(true);
     }
 }
